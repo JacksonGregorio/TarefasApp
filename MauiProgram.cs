@@ -6,6 +6,8 @@ public static class MauiProgram
 {
 	public static MauiApp CreateMauiApp()
 	{
+		//Jackson de lima Gregório 
+		//Sergio de chong wu
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
