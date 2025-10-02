@@ -12,7 +12,7 @@ public sealed class TaskRepository
     private TaskRepository()
     {
         Tasks.Add(new TaskItem { Title = "Comprar mantimentos", Description = "Arroz, feijão, café", Priority = TaskPriority.Alta });
-        Tasks.Add(new TaskItem { Title = "Estudar MAUI", Description = "Navegação, Shell, CollectionView", Priority = TaskPriority.Media });
+        Tasks.Add(new TaskItem { Title = "Teste Testado", Description = "navegar teste", Priority = TaskPriority.Media });
     }
 
     public void Add(TaskItem item) => Tasks.Add(item);

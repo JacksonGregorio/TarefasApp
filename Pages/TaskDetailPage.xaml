@@ -37,7 +37,7 @@
 
             <HorizontalStackLayout Spacing="12" Margin="0,16,0,0">
                 <Button Text="Editar" Clicked="OnEditClicked" />
-                <Button Text="Excluir" BackgroundColor="{DynamicResource Red500}" TextColor="White" Clicked="OnDeleteClicked" />
+                <Button Text="Excluir" BackgroundColor="{DynamicResource Red500}" TextColor="Red" Clicked="OnDeleteClicked" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
