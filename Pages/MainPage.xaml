@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefasApp.Pages.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Tarefas">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adicionar" Clicked="OnAddClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid Padding="16" RowDefinitions="Auto,*">
+        <Label Text="Minhas tarefas" FontSize="24" FontAttributes="Bold" />
+        <CollectionView Grid.Row="1"
+                        x:Name="TasksView"
+                        ItemsSource="{Binding Tasks}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="12" Margin="0,8" HasShadow="True" CornerRadius="12">
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+                            <Label Text="{Binding Title}" FontAttributes="Bold" />
+                            <Label Grid.Row="1" Text="{Binding Description}" FontSize="12" Opacity="0.8" />
+                            <Button Grid.Column="1"
+                                    Text="Detalhes"
+                                    Clicked="OnDetailsClicked"
+                                    CommandParameter="{Binding .}" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

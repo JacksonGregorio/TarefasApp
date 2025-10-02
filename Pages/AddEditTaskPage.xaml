@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="TarefasApp.Pages.AddEditTaskPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="{Binding ModalTitle}">
+
+    <ScrollView Padding="16">
+        <VerticalStackLayout Spacing="12">
+            <Entry Placeholder="Título" Text="{Binding Editable.Title}" />
+            <Editor Placeholder="Descrição" HeightRequest="100" Text="{Binding Editable.Description}" />
+            <DatePicker Date="{Binding Editable.CreatedAt, Mode=TwoWay}" />
+            <Picker Title="Prioridade" SelectedIndex="{Binding PriorityIndex}">
+                <Picker.Items>
+                    <x:String xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">Baixa</x:String>
+                    <x:String xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">Média</x:String>
+                    <x:String xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">Alta</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <HorizontalStackLayout Spacing="12" Margin="0,16,0,0">
+                <Button Text="Cancelar" Clicked="OnCancelClicked" />
+                <Button Text="Salvar" Clicked="OnSaveClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
